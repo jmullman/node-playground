@@ -7,6 +7,10 @@
     "modules",
     "non-functional"
   ],
+  "author": {
+    "name": "James Mitchell 'Mitch' Ullman",
+    "email": "james.mitchell@mimbs-ullman.net"
+  },
   "homepage": "https://github.com/jmullman/node-playground",
   "bugs": {
     "url": "https://github.com/jmullman/node-playground"
@@ -26,8 +30,17 @@
     "node-fetch": "^3.2.0"
   },
   "devDependencies": {
-    "eslint": "^8.8.0",
-    "eslint-plugin-promise": "^6.0.0",
+    "check-engine": "^1.10.1",
+    "lockfile-lint": "^4.6.2",
     "standard": "github:standard/standard"
+  },
+  "lockfile-lint": {
+    "path": "./package-lock.json",
+    "type": "npm",
+    "allowed-schemes": [
+      "https:",
+      "git+https:",
+      "git+ssh:"
+    ]
   }
 }
