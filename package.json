@@ -25,6 +25,13 @@
   "engines": {
     "node": ">=16.13.2"
   },
+  "scripts": {
+    "lint": "npm-run-all --print-label --parallel lint:*",
+    "lint:js": "standard",
+    "lint:lockfile": "lockfile-lint",
+    "lint:engines": "check-engine",
+    "lint:peer": "npm ls >/dev/null"
+  },
   "dependencies": {
     "@octokit/rest": "~18.12.0",
     "node-fetch": "^3.2.0"
