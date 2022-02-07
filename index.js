@@ -10,20 +10,18 @@
 //         })
 //         .then(data => console.log(data));
 
-import {Octokit} from "@octokit/rest"
+import { Octokit } from '@octokit/rest'
 
-const github = new Octokit();
-
+const github = new Octokit()
 
 const octocat = await github.request('GET /octocat')
-  .then((response) => {return response;});
+  .then((response) => { return response })
 
-function printCat(cat) {
-  return String.fromCharCode.apply(null, new Uint8Array(cat));
+function printCat (cat) {
+  return String.fromCharCode.apply(null, new Uint8Array(cat))
 }
-console.log(printCat(octocat.data));
+console.log(printCat(octocat.data))
 console.log(`octocat:
 Status: %d
 URL: %s
-Headers: %s\n`, octocat.status, octocat.url, octocat.headers);
-
+Headers: %s\n`, octocat.status, octocat.url, octocat.headers)
